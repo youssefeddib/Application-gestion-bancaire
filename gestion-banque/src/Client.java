@@ -115,7 +115,15 @@ public class Client {
         System.out.println("clinet ajouter avec sucees");
 
     }
-
+    public  void afficherClient(ArrayList<Client> clients){
+        if (clients.isEmpty()){
+            System.out.println("aucun client afficher");
+        }else {
+            for (Client client : clients){
+                System.out.println(client);
+            }
+        }
+    }
 
 
 
