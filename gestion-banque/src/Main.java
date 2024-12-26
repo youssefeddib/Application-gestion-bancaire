@@ -18,6 +18,7 @@ public class Main {
             System.out.println("3.quitter");
             System.out.println("4.votre choix");
             Client client = new Client();
+            Compte compte = null;
             choix = scanner.nextInt();
 
             switch (choix) {
@@ -25,7 +26,7 @@ public class Main {
                     client.gestionClient(clientArrayList);
                     break;
                 case 2:
-                    //gererCompte();
+                    compte.gestionCompte(compteArrayList);
                     break;
                 case 3:
                     //gererOperation();
