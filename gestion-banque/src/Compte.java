@@ -14,21 +14,20 @@ public Compte(int nmcompte, int solde, String client, String methode){
     public int getNmcompte() {
         return nmcompte;
     }
-
-    public void setNmcompte(int nmcompte) {
+    public void setNmcompte() {
         this.nmcompte = nmcompte;
     }
 
     public int getSolde() {
-        return solde;
+    return solde;
     }
 
-    public void setSolde(int solde) {
-        this.solde = solde;
+    public void setSolde() {
+    this.solde = solde;
     }
 
     public String getClient() {
-        return client;
+    return client;
     }
 
     public void setClient(String client) {
