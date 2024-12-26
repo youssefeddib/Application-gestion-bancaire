@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Client {
@@ -15,12 +16,15 @@ public class Client {
         this.email = email;
         this.telephone = telephone;
     }
+    public Client(){
+
+    }
 
     public int getId() {
         return id;
     }
 
-    public void setId() {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -28,7 +32,7 @@ public class Client {
         return nom;
     }
 
-    public void setNom() {
+    public void setNom(String nom) {
         this.nom = nom;
     }
 
@@ -36,7 +40,7 @@ public class Client {
         return prenom;
     }
 
-    public void setPrenom() {
+    public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
 
@@ -44,7 +48,7 @@ public class Client {
         return email;
     }
 
-    public void setEmail() {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -52,11 +56,11 @@ public class Client {
         return telephone;
     }
 
-    public void setEmail() {
+    public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
 
-    public static void main(String[] args) {
+    public  void gestionClient(ArrayList<Client> clients) {
         Scanner scanner = new Scanner(System.in);
         int choix;
 
@@ -68,13 +72,14 @@ public class Client {
             System.out.println("3.quiter lapplication");
             System.out.println("votre choix");
             choix = scanner.nextInt();
+            Client client = new Client();
 
             switch (choix) {
                 case 1:
-                    // ajouterClient();
+                    client.ajouterClient(clients);
                     break;
                 case 2:
-                    // afficherClient();
+                     client.afficherClient(clients);
                     break;
                 case 3:
                     System.out.println("au revoire");
@@ -85,6 +90,32 @@ public class Client {
         }while (choix !=3);
         scanner.close();
     }
+
+    public  void ajouterClient(ArrayList<Client> clients){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("entrer Id:");
+        int id = scanner.nextInt();
+
+        System.out.print("enter nom:");
+        String nom = scanner.nextLine();
+
+        System.out.print("entrer prenom:");
+        String prenom = scanner.nextLine();
+
+        System.out.print("entrer email:");
+        String email = scanner.nextLine();
+
+        System.out.print("enter telephone:");
+        String telephone = scanner.nextLine();
+
+
+        Client client = new Client(id, nom, prenom,email, telephone);
+        clients.add(client);
+        System.out.println("clinet ajouter avec sucees");
+
+    }
+
 
 
 

@@ -2,10 +2,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    static ArrayList<Client> clientArrayList = new ArrayList<>();
-    static ArrayList<Compte> compteArrayList = new ArrayList<>();
+
 
     public static void main(String[] args) {
+         ArrayList<Client> clientArrayList = new ArrayList<>();
+         ArrayList<Compte> compteArrayList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         int choix;
 
@@ -16,12 +17,12 @@ public class Main {
             System.out.println("3.gerer operation");
             System.out.println("3.quitter");
             System.out.println("4.votre choix");
-
+            Client client = new Client();
             choix = scanner.nextInt();
 
             switch (choix) {
                 case 1:
-                    //gererClient();
+                    client.gestionClient(clientArrayList);
                     break;
                 case 2:
                     //gererCompte();
