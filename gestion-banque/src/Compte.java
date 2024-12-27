@@ -7,12 +7,12 @@ public abstract class Compte {
     private int solde;
     private String client;
 
-public Compte(int nmcompte, int solde, String client, String methode){
-    this.nmcompte = nmcompte;
-    this.solde = solde;
-    this.client = client;
+    public Compte(int nmcompte, int solde, String client, String methode) {
+        this.nmcompte = nmcompte;
+        this.solde = solde;
+        this.client = client;
 
-}
+    }
 
     public Compte() {
     }
@@ -20,20 +20,21 @@ public Compte(int nmcompte, int solde, String client, String methode){
     public int getNmcompte() {
         return nmcompte;
     }
+
     public void setNmcompte(int nmcompte) {
         this.nmcompte = nmcompte;
     }
 
     public int getSolde() {
-    return solde;
+        return solde;
     }
 
     public void setSolde(int solde) {
-    this.solde = solde;
+        this.solde = solde;
     }
 
     public String getClient() {
-    return client;
+        return client;
     }
 
     public void setClient(String client) {
@@ -56,14 +57,41 @@ public Compte(int nmcompte, int solde, String client, String methode){
             };
             switch (choix) {
                 case 1:
-                    compte.creerCompte(Comptes);
+                    compte.creerCompte(comptes);
                     break;
                 case 2:
-                    compte.
+                    //compte.afficherlesinformation(comptes);
+                    break;
+                case 3:
+                    //compte.associerplusieurcompte(compts);
+                case 4:
+                    System.out.println("au revoire");
+                default:
+                    System.out.println("choix invalide");
             }
-        }
-
+        } while (choix != 4);
+        scanner.close();
     }
+public void creerCompte(ArrayList<Compte>comptes){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Nm COMPTE : ");
+        int nmcompte = scanner.nextInt();
+
+        System.out.println("SOLDE :");
+        int solde = scanner.nextInt();
+
+        System.out.println("client :");
+        String client = scanner.nextLine();
+
+        Compte compte = new Compte( nmcompte, solde, client);
+        comptes.add(compte);
+        System.out.println("COMPTE CREER AVEC SUCSEE");
+
+
 }
+}
+
+
 
 

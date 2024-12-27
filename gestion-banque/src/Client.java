@@ -72,14 +72,14 @@ public class Client {
             System.out.println("3.quiter lapplication");
             System.out.println("votre choix");
             choix = scanner.nextInt();
-            Client client = new Client();
 
             switch (choix) {
                 case 1:
-                    client.ajouterClient(clients);
+                    ajouterClient(clients);
+
                     break;
                 case 2:
-                     client.afficherClient(clients);
+                     afficherClient(clients);
                     break;
                 case 3:
                     System.out.println("au revoire");

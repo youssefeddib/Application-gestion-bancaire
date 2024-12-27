@@ -12,9 +12,9 @@ public class Main {
 
         do {
             System.out.println(" menu principale");
-            System.out.println("1.gerer client");
-            System.out.println("2.gerer compte");
-            System.out.println("3.gerer operation");
+            System.out.println("1.gestion client");
+            System.out.println("2.gestion compte");
+            System.out.println("3.gestion operation");
             System.out.println("3.quitter");
             System.out.println("4.votre choix");
             Client client = new Client();
