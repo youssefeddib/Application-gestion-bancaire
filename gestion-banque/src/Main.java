@@ -15,8 +15,8 @@ public class Main {
             System.out.println("1.gestion client");
             System.out.println("2.gestion compte");
             System.out.println("3.gestion operation");
-            System.out.println("3.quitter");
-            System.out.println("4.votre choix");
+            System.out.println("4.quitter");
+            System.out.println(" - Votre choix ");
             Client client = new Client();
             Compte compte = null;
             choix = scanner.nextInt();

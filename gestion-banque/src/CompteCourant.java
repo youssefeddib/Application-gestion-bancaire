@@ -8,11 +8,26 @@ public class CompteCourant extends Compte {
 
     super(nmcompte, solde, client);
         this.fraisBancaires = fraisBancaires;
+
     }
-    Scanner scanner = Scanner(System.in);
+
 
     public CompteCourant(){
         super();
     }
-Override
+
+    public double getFraisBancaires() {
+        return fraisBancaires;
+    }
+
+    public void setFraisBancaires(double fraisBancaires) {
+        this.fraisBancaires = fraisBancaires;
+    }
+
+    @Override
+    public String toString() {
+        return "CompteCourant " + super.toString() +
+                "fraisBancaires=" + fraisBancaires +
+                '}';
+    }
 }

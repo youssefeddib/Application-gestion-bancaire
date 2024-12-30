@@ -60,6 +60,16 @@ public class Client {
         this.telephone = telephone;
     }
 
+    @Override
+    public String toString() {
+        return "Client : " +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", email='" + email + '\'' +
+                ", telephone='" + telephone ;
+    }
+
     public  void gestionClient(ArrayList<Client> clients) {
         Scanner scanner = new Scanner(System.in);
         int choix;
@@ -97,11 +107,13 @@ public class Client {
         System.out.print("entrer Id:");
         int id = scanner.nextInt();
 
+        System.out.print("entrer prenom:");
+        String prenom = scanner.nextLine();
+        String prenom1  = scanner.nextLine();
         System.out.print("enter nom:");
         String nom = scanner.nextLine();
 
-        System.out.print("entrer prenom:");
-        String prenom = scanner.nextLine();
+
 
         System.out.print("entrer email:");
         String email = scanner.nextLine();
@@ -110,7 +122,7 @@ public class Client {
         String telephone = scanner.nextLine();
 
 
-        Client client = new Client(id, nom, prenom,email, telephone);
+        Client client = new Client(id, nom, prenom1,email, telephone);
         clients.add(client);
         System.out.println("clinet ajouter avec sucees");
 
@@ -120,7 +132,7 @@ public class Client {
             System.out.println("aucun client afficher");
         }else {
             for (Client client : clients){
-                System.out.println(client);
+                System.out.println(client.toString());
             }
         }
     }
